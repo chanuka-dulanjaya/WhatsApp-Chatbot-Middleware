@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: middleware-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host=0.0.0.0 --port=10000
+    envVars:
+      - key: CLIENT_ID
+        value: LDBKVUVVLSBCGVXQVWOBWHSNGI723XCNH7INNNOF
+      - key: CLIENT_SECRET
+        value: njPezmpm1K-ydIbYDlDkNBpo5AVCfbtYksY1wsiVjvcNJyG9Zi5fk6FsvUgjdjnLUmgydtJ8
+      - key: TENANT_ID
+        value: XMFFQMFUEFUXL5UEC72I5XJZQB24ME56
+      - key: WORKFLOW_ID
+        value: w6bedaca3a5
